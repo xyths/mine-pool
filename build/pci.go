@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sero-cash/mine-pool/build"
+	"github.com/xyths/mine-pool/build"
 )
 
 var (

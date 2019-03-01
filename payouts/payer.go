@@ -10,9 +10,9 @@ import (
 
 	"github.com/sero-cash/go-sero/common/hexutil"
 
-	"github.com/sero-cash/mine-pool/rpc"
-	"github.com/sero-cash/mine-pool/storage"
-	"github.com/sero-cash/mine-pool/util"
+	"github.com/xyths/mine-pool/rpc"
+	"github.com/xyths/mine-pool/storage"
+	"github.com/xyths/mine-pool/util"
 )
 
 const txCheckInterval = 5 * time.Second

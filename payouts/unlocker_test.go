@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/sero-cash/mine-pool/rpc"
-	"github.com/sero-cash/mine-pool/storage"
+	"github.com/xyths/mine-pool/rpc"
+	"github.com/xyths/mine-pool/storage"
 )
 
 func TestMain(m *testing.M) {

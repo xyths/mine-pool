@@ -10,7 +10,7 @@ fi
 # Create fake Go workspace if it doesn't exist yet.
 workspace="$PWD/build/_workspace"
 root="$PWD"
-serodir="$workspace/src/github.com/sero-cash"
+serodir="$workspace/src/github.com/xyths"
 if [ ! -L "$serodir/mine-pool" ]; then
     mkdir -p "$serodir"
     cd "$serodir"

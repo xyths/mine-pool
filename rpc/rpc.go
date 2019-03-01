@@ -14,7 +14,7 @@ import (
 	"github.com/sero-cash/go-sero/common"
 	"github.com/sero-cash/go-sero/common/hexutil"
 
-	"github.com/sero-cash/mine-pool/util"
+	"github.com/xyths/mine-pool/util"
 )
 
 type RPCClient struct {

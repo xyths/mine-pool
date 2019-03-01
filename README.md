@@ -29,13 +29,13 @@ Dependencies:
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First download the lastest [gero](https://github.com/sero-cash/go-sero/releases).
+First download the lastest [gero](https://github.com/xyths/go-sero/releases).
 
 Clone & compile:
 
     git clone https://github.com/sero-cash/go-sero
     git clone https://github.com/sero-cash/go-czero-import 
-    git clone https://github.com/sero-cash/mine-pool
+    git clone https://github.com/xyths/mine-pool
     cd  mine-pool
     #v3, v4 stands for linux kernel version
     make linux-v3 or make linux-v4

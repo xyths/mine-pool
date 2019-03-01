@@ -9,7 +9,7 @@ import (
 
 	"gopkg.in/redis.v3"
 
-	"github.com/sero-cash/mine-pool/util"
+	"github.com/xyths/mine-pool/util"
 )
 
 type Config struct {

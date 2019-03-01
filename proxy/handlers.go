@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/sero-cash/mine-pool/rpc"
-	"github.com/sero-cash/mine-pool/util"
+	"github.com/xyths/mine-pool/rpc"
+	"github.com/xyths/mine-pool/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix
