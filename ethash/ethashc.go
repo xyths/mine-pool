@@ -34,11 +34,14 @@ package ethash
 #cgo LDFLAGS: -lm
 #cgo LDFLAGS: -L ../czero/lib -lczero
 
+
 #include "src/libethash/internal.c"
 
 #include "src/libethash/sha3.c"
 
 #include "src/libethash/io.c"
+
+#include "src/libethash/stub.c"
 
 #ifdef _WIN32
 #	include "src/libethash/io_win32.c"
