@@ -15,7 +15,7 @@ import (
 	"github.com/xyths/mine-pool/util"
 )
 
-const txCheckInterval = 5 * time.Second
+const txCheckInterval = 150 * time.Second
 
 type PayoutsConfig struct {
 	Enabled      bool   `json:"enabled"`
