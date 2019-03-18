@@ -4,12 +4,15 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"log"
 	"math/rand"
 	"os"
 	"path/filepath"
 	"runtime"
 	"time"
+
+	"github.com/sero-cash/mine-pool/pprof"
 
 	"github.com/sero-cash/go-czero-import/cpt"
 
@@ -20,6 +23,8 @@ import (
 	"github.com/xyths/mine-pool/proxy"
 	"github.com/xyths/mine-pool/storage"
 )
+
+var enablePprof = flag.Bool("pprof", false, "Enable the pprof HTTP server")
 
 var cfg proxy.Config
 var backend *storage.RedisClient
@@ -77,6 +82,12 @@ func main() {
 	cpt.ZeroInit_NoCircuit()
 
 	readConfig(&cfg)
+
+	if cfg.Pprof {
+		log.Println("start pprof")
+		go pprof.Pprof(cfg.PprofPort)
+	}
+
 	rand.Seed(time.Now().UnixNano())
 
 	if cfg.Threads > 0 {
