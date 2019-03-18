@@ -15,20 +15,20 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-      ApiUrl: '//pgpool.chainpower.io:8080/',
+      ApiUrl: '//118.25.80.42:8080/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://pgpool.chainpower.io',
+      HttpHost: 'http://118.25.80.42',
       HttpPort: 9999,
 
       // Stratum mining endpoint
-      StratumHost: 'pgpool.chainpower.io',
+      StratumHost: '118.25.80.42',
       StratumPort: 8008,
 
 
 
       // Fee and payout details
-      PoolFee: '0.1%',
+      PoolFee: '1%',
       PayoutThreshold: '1 SERO',
 
       // For network hashrate (change for your favourite fork)
