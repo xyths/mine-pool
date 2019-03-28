@@ -40,18 +40,16 @@
   </div>
   <div>
     <hr/>
+    <h4>经典(HTTP协议)</h4>
     <h4 class="note note-info text-center" style="word-break: break-all; white-space: normal;" >
-      Windows: cminer.exe -P {{config.HttpHost}}:{{config.HttpPort}}/&lt;钱包地址&gt;/&lt;自定义名称&gt; --cpu=0
-    </h4>
-    <h4 class="note note-info text-center" style="word-break: break-all; white-space: normal;" >
-      MacOS & Linux: cminer -P {{config.HttpHost}}:{{config.HttpPort}}/&lt;钱包地址&gt;/&lt;自定义名称&gt; --cpu=0
+      cminer -P {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; --cpu=0
     </h4>
   </div>
 
 
   <div>
     <hr/>
-    <h4>推荐</h4>
+    <h4>推荐(Stratum协议)</h4>
     <h4 class="note note-info text-center" style="word-break: break-all; white-space: normal;" >
       cminer.exe -P stratum1+tcp://&lt;address&gt;.&lt;worker&gt; @{{config.StratumHost}}:{{config.StratumPort}} --cpu=0
     </h4>
