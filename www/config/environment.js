@@ -28,7 +28,7 @@ module.exports = function(environment) {
 
 
       // Fee and payout details
-      PoolFee: '1%',
+      PoolFee: '0.9%',
       PayoutThreshold: '1 SERO',
 
       // For network hashrate (change for your favourite fork)

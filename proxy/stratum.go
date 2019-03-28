@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"net"
+	"strconv"
 	"time"
 
 	"github.com/xyths/mine-pool/util"
@@ -107,7 +108,7 @@ func (cs *Session) handleTCPMessage(s *ProxyServer, req *StratumReq) error {
 		var params []string
 		err := json.Unmarshal(req.Params, &params)
 		if err != nil {
-			log.Println("Malformed stratum request params from", cs.ip)
+			log.Printf("Malformed stratum request params from %v,err:%v", cs.ip, err)
 			return err
 		}
 		reply, errReply := s.handleLoginRPC(cs, params, req.Worker)
@@ -190,7 +191,7 @@ func (s *ProxyServer) broadcastNewJobs() {
 	if t == nil || len(t.Header) == 0 || s.isSick() {
 		return
 	}
-	reply := []string{t.Header, t.Seed, s.diff}
+	reply := []string{t.Header, t.Seed, s.diff, strconv.FormatUint(t.Height, 10)}
 
 	s.sessionsMu.RLock()
 	defer s.sessionsMu.RUnlock()
